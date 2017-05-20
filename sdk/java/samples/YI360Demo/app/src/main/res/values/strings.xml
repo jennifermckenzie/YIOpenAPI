@@ -1,3 +1,79 @@
 <resources>
-    <string name="app_name">YI360Demo</string>
+    <string name="app_name">YI Control</string>
+    <string name="settings_colormode_prompt">Color Mode</string>
+    <string-array name="settings_colormode">
+        <item>YiColor</item>
+        <item>Flat</item>
+    </string-array>
+    <string name="settings_ev_prompt">Exposure</string>
+    <string-array name="settings_ev">
+        <item>-2</item>
+        <item>-1.5</item>
+        <item>-1</item>
+        <item>-0.5</item>
+        <item>0</item>
+        <item>+0.5</item>
+        <item>+1</item>
+        <item>+1.5</item>
+        <item>+2</item>
+    </string-array>
+    <string name="settings_fov_prompt">Field of View</string>
+    <string-array name="settings_fov">
+        <item>Wide</item>
+        <item>Medium</item>
+        <item>Narrow</item>
+    </string-array>
+    <string name="settings_iso_prompt">ISO</string>
+    <string-array name="settings_iso">
+        <item>Auto</item>
+        <item>100</item>
+        <item>200</item>
+        <item>400</item>
+        <item>800</item>
+        <item>1600</item>
+        <item>6400</item>
+    </string-array>
+    <string name="settings_meteringmode_prompt">Metering Mode</string>
+    <string-array name="settings_meteringmode">
+        <item>Center</item>
+        <item>Average</item>
+        <item>Spot</item>
+    </string-array>
+    <string name="settings_resolution_prompt">Resolution</string>
+    <string-array name="settings_resolution">
+        <item>12MP (4000x3000 4:3) fov:w</item>
+        <item>7MP (3008x2256 4:3) fov:w</item>
+        <item>7MP (3008x2256 4:3) fov:m</item>
+        <item>5MP (2560x1920 4:3) fov:m</item>
+        <item>8MP (3840x2160 16:9) fov:w</item>
+    </string-array>
+    <string name="settings_quality_prompt">Quality</string>
+    <string-array name="settings_quality">
+        <item>Low</item>
+        <item>Middle</item>
+        <item>High</item>
+    </string-array>
+    <string name="settings_sharpness_prompt">Sharpness</string>
+    <string-array name="settings_sharpness">
+        <item>Low</item>
+        <item>Medium</item>
+        <item>High</item>
+    </string-array>
+    <string name="settings_shuttertime_prompt">Shutter Time</string>
+    <string-array name="settings_shuttertime">
+        <item>Auto</item>
+        <item>2s</item>
+        <item>5s</item>
+        <item>10s</item>
+        <item>20s</item>
+        <item>30s</item>
+    </string-array>
+    <string name="settings_whitebalance_prompt">White Balance</string>
+    <string-array name="settings_whitebalance">
+        <item>Auto</item>
+        <item>Native</item>
+        <item>Tungsten</item>
+        <item>Daylight</item>
+        <item>Cloudy</item>
+    </string-array>
 </resources>

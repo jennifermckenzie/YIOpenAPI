@@ -29,7 +29,8 @@ enum CameraState
     Disconnected,
     Connected,
     StartRecording,
-    Recording
+    Recording,
+    CapturingPhoto
 }
 
 class Camera extends ActionCameraListener {
@@ -111,6 +112,29 @@ class Camera extends ActionCameraListener {
         }
     }
 
+    public void capturePhoto() {
+        if (mState == CameraState.Connected) {
+            updateState(CameraState.CapturingPhoto);
+            mCamera.stopViewFinder(null, null).stopRecording(null, null).setSystemMode(SystemMode.Capture, null, null)
+                    .startCommandGroup()
+                    .setDateTime(new Date(), null, null)
+                    .setPhotoShutterTime(ShutterTime.st_Auto, null, null)
+                    .setPhotoResolution(PhotoResolution.p_12MP_4000x3000_4x3_w, null, null)
+                    .capturePhoto(null, null)
+                    .capturePhoto(null, null)
+                    .capturePhoto(null, null)
+                    .submitCommandGroup(null, new ActionCameraCommandCallback1<YICameraSDKError>() {
+                        @Override
+                        public void onInvoke(YICameraSDKError val) {
+                            Log.i("YiCamera", "Capturing photo failed");
+                            if (mState == CameraState.CapturingPhoto) {
+                                updateState(CameraState.Connected);
+                            }
+                        }
+                    });
+        }
+    }
+
     //region implementation of ActionCameraListener
     @Override
     public void onConnected() {
@@ -164,6 +188,13 @@ class Camera extends ActionCameraListener {
     public void onRecordStopped() {
         updateState(CameraState.Connected);
     }
+
+    @Override
+    public void onCaptureStarted() { updateState(CameraState.CapturingPhoto); }
+
+    @Override
+    public void onCaptureStopped() { updateState(CameraState.Connected); }
+
     //endregion
 
     private void updateState(CameraState state) {

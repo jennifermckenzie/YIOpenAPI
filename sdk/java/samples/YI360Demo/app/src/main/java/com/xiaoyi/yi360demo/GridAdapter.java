@@ -63,6 +63,7 @@ class GridAdapter extends ArrayAdapter<Camera> {
                 return R.drawable.white_camera;
 
             case Recording:
+            case CapturingPhoto:
                 return R.drawable.recording_camera;
         }
     }
@@ -81,6 +82,9 @@ class GridAdapter extends ArrayAdapter<Camera> {
 
             case Recording:
                 return "recording";
+
+            case CapturingPhoto:
+                return "capturing photo";
         }
     }
 }

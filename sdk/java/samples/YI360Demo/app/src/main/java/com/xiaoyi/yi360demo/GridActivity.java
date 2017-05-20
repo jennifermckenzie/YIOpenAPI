@@ -151,6 +151,18 @@ public class GridActivity extends AppCompatActivity {
         }
     }
 
+    public void capturePhoto(MenuItem item) {
+        for (Camera camera: cameras) {
+            if (!camera.getIp().isEmpty()) {
+                camera.capturePhoto();
+            }
+        }
+    }
+
+    public void showPhotoSettings(MenuItem item) {
+        //show photo settings
+    }
+
     public void exit(MenuItem item) {
         if (mExitDialog == null) {
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
