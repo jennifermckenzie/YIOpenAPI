@@ -12,8 +12,5 @@
     <item
         android:onClick="capturePhoto"
         android:title="Capture Photo" />
-    <item
-        android:onClick="showSettings"
-        android:title="Settings" />
 
 </menu>
