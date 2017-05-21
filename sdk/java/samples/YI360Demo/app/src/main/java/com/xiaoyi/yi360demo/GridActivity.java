@@ -20,7 +20,6 @@ package com.xiaoyi.yi360demo;
 import android.content.DialogInterface;
 import android.net.wifi.WifiManager;
 import android.os.*;
-import android.print.PrintAttributes;
 import android.support.v7.app.*;
 import android.util.Log;
 import android.view.Menu;
