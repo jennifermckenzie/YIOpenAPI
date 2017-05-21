@@ -122,7 +122,6 @@ class Camera extends ActionCameraListener {
                        public void onInvoke(YICameraSDKError val) {
 
                            Log.i("YiCamera", "Start recording failed");
-                           Log.i("YiCamera", val.getDetail());
                            if (mState == CameraState.StartRecording) {
                                updateState(CameraState.Connected);
                            }
@@ -163,7 +162,6 @@ class Camera extends ActionCameraListener {
                         @Override
                         public void onInvoke(YICameraSDKError val) {
                             Log.i("YiCamera", "Capturing photo failed");
-                            Log.i("YiCamera", val.getDetail());
                             if (mState == CameraState.CapturingPhoto) {
                                 updateState(CameraState.Connected);
                             }
