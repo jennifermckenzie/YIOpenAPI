@@ -87,16 +87,40 @@ class Camera extends ActionCameraListener {
         }
     }
 
-    public void startRecording(Date startTime) {
+    public void startRecording(Date startTime,
+                               ColorMode colorMode,
+                               ExposureValue exposureValue,
+                               ISO iso,
+                               FieldOfView fieldOfView,
+                               MeteringMode meteringMode,
+                               VideoResolution videoResolution,
+                               Quality videoQuality,
+                               Sharpness sharpness,
+                               WhiteBalance whiteBalance,
+                               VideoStandard videoStandard,
+                               ToggleState muteState
+                               ) {
         if (mState == CameraState.Connected) {
             updateState(CameraState.StartRecording);
             mCamera.stopViewFinder(null, null).stopRecording(null, null).setSystemMode(SystemMode.Record, null, null)
-                   .startCommandGroup()
-                   .setDateTime(new Date(), null, null)
-                   .startRecording(startTime.getHours(), startTime.getMinutes(), startTime.getSeconds(), null, null)
-                   .submitCommandGroup(null, new ActionCameraCommandCallback1<YICameraSDKError>() {
+                    .setMeteringMode(meteringMode, null, null)
+                    .setVideoColorMode(colorMode, null, null)
+                    .setVideoExposureValue(exposureValue, null, null)
+                    .setVideoISO(iso, null, null)
+                    .setVideoFieldOfView(fieldOfView, null, null)
+                    .setVideoResolution(videoResolution, null, null)
+                    .setVideoQuality(videoQuality, null, null)
+                    .setVideoSharpness(sharpness, null, null)
+                    .setVideoWhiteBalance(whiteBalance, null, null)
+                    .setVideoStandard(videoStandard, null, null)
+                    .setVideoMuteState(muteState, null, null)
+                    .startCommandGroup()
+                    .setDateTime(new Date(), null, null)
+                    .startRecording(startTime.getHours(), startTime.getMinutes(), startTime.getSeconds(), null, null)
+                    .submitCommandGroup(null, new ActionCameraCommandCallback1<YICameraSDKError>() {
                        @Override
                        public void onInvoke(YICameraSDKError val) {
+
                            Log.i("YiCamera", "Start recording failed");
                            if (mState == CameraState.StartRecording) {
                                updateState(CameraState.Connected);
@@ -112,16 +136,27 @@ class Camera extends ActionCameraListener {
         }
     }
 
-    public void capturePhoto() {
+    public void capturePhoto(ColorMode colorMode,
+                             ExposureValue exposureValue,
+                             ISO iso,
+                             MeteringMode meteringMode,
+                             PhotoResolution photoResolution,
+                             Sharpness sharpness,
+                             ShutterTime shutterTime,
+                             WhiteBalance whiteBalance) {
         if (mState == CameraState.Connected) {
             updateState(CameraState.CapturingPhoto);
             mCamera.stopViewFinder(null, null).stopRecording(null, null).setSystemMode(SystemMode.Capture, null, null)
+                    .setMeteringMode(meteringMode, null, null)
+                    .setPhotoColorMode(colorMode, null, null)
+                    .setPhotoExposureValue(exposureValue, null, null)
+                    .setPhotoISO(iso, null, null)
+                    .setPhotoResolution(photoResolution, null, null)
+                    .setPhotoSharpness(sharpness, null, null)
+                    .setPhotoShutterTime(shutterTime, null, null)
+                    .setPhotoWhiteBalance(whiteBalance, null, null)
                     .startCommandGroup()
                     .setDateTime(new Date(), null, null)
-                    .setPhotoShutterTime(ShutterTime.st_Auto, null, null)
-                    .setPhotoResolution(PhotoResolution.p_12MP_4000x3000_4x3_w, null, null)
-                    .capturePhoto(null, null)
-                    .capturePhoto(null, null)
                     .capturePhoto(null, null)
                     .submitCommandGroup(null, new ActionCameraCommandCallback1<YICameraSDKError>() {
                         @Override

@@ -39,8 +39,8 @@
         <item>Average</item>
         <item>Spot</item>
     </string-array>
-    <string name="settings_resolution_prompt">Resolution</string>
-    <string-array name="settings_resolution">
+    <string name="settings_photoresolution_prompt">Resolution</string>
+    <string-array name="settings_photoresolution">
         <item>12MP (4000x3000 4:3) fov:w</item>
         <item>7MP (3008x2256 4:3) fov:w</item>
         <item>7MP (3008x2256 4:3) fov:m</item>
@@ -76,4 +76,52 @@
         <item>Daylight</item>
         <item>Cloudy</item>
     </string-array>
+    <string name="settings_videostandard_prompt">Video Standard</string>
+    <string-array name="settings_videostandard">
+        <item>PAL</item>
+        <item>NTSC</item>
+    </string-array>
+    <string name="settings_videoresolution_prompt">Resolution</string>
+    <string-array name="settings_videoresolution">
+        <item>3840x1260 30P 16:9</item>
+        <item>3840x2160 30P 16:9 super</item>
+        <item>2560x1920 30P 4:3</item>
+        <item>1920x1440 60P 4:3</item>
+        <item>1920x1440 30P 4:3</item>
+        <item>1920x1080 120P 16:9</item>
+        <item>1920x1080 120P 16:9 super</item>
+        <item>1920x1080 60P 16:9</item>
+        <item>1920x1080 60P 16:9 super</item>
+        <item>1920x1080 30P 16:9</item>
+        <item>1920x1080 30P 16:9 super</item>
+        <item>1280x960 120P 4:3</item>
+        <item>1280x960 60P 4:3</item>
+        <item>1280x720 240P 16:9</item>
+        <item>1280x720 120P 16:9 super</item>
+        <item>1280x720 60P 16:9 super</item>
+        <item>840x480 240P 16:9</item>
+    </string-array>
+    <string name="settings_videorotate_prompt">Rotation</string>
+    <string-array name="settings_videorotate">
+        <item>Off</item>
+        <item>On</item>
+        <item>Auto</item>
+    </string-array>
+    <string name="settings_recordmode_prompt">Rotation</string>
+    <string-array name="settings_recordmode">
+        <item>Normal</item>
+        <item>Timelapse</item>
+    </string-array>
+    <string name="settings_mute_prompt">Mute</string>
+    <string name="settings_delay_prompt">Delayed start</string>
+    <string-array name="settings_delay">
+        <item>No delay</item>
+        <item>1 second</item>
+        <item>5 seconds</item>
+        <item>10 seconds</item>
+        <item>15 seconds</item>
+        <item>30 seconds</item>
+    </string-array>
+
+
 </resources>

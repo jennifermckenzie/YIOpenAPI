@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="8dp">
+
+        <TableRow android:layout_margin="4dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/settings_colormode_prompt" />
+
+            <Spinner
+                android:id="@+id/photoColorMode"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:entries="@array/settings_colormode"
+                android:prompt="@string/settings_colormode_prompt" />
+        </TableRow>
+
+        <TableRow android:layout_margin="4dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/settings_ev_prompt" />
+
+            <Spinner
+                android:id="@+id/photoExposureValue"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:entries="@array/settings_ev"
+                android:prompt="@string/settings_ev_prompt" />
+        </TableRow>
+
+        <TableRow android:layout_margin="4dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/settings_iso_prompt" />
+
+            <Spinner
+                android:id="@+id/photoIso"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:entries="@array/settings_iso"
+                android:prompt="@string/settings_iso_prompt" />
+        </TableRow>
+
+        <TableRow android:layout_margin="4dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/settings_meteringmode_prompt" />
+
+            <Spinner
+                android:id="@+id/photoMeteringMode"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:entries="@array/settings_meteringmode"
+                android:prompt="@string/settings_meteringmode_prompt" />
+        </TableRow>
+
+        <TableRow android:layout_margin="4dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/settings_photoresolution_prompt" />
+
+            <Spinner
+                android:id="@+id/photoResolution"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:entries="@array/settings_photoresolution"
+                android:prompt="@string/settings_photoresolution_prompt" />
+        </TableRow>
+
+        <TableRow android:layout_margin="4dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/settings_sharpness_prompt" />
+
+            <Spinner
+                android:id="@+id/photoSharpness"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:entries="@array/settings_sharpness"
+                android:prompt="@string/settings_sharpness_prompt" />
+        </TableRow>
+
+        <TableRow android:layout_margin="4dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/settings_shuttertime_prompt" />
+
+            <Spinner
+                android:id="@+id/photoShutterTime"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:entries="@array/settings_shuttertime"
+                android:prompt="@string/settings_shuttertime_prompt" />
+        </TableRow>
+
+        <TableRow android:layout_margin="4dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/settings_whitebalance_prompt" />
+
+            <Spinner
+                android:id="@+id/photoWhiteBalance"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:entries="@array/settings_whitebalance"
+                android:prompt="@string/settings_whitebalance_prompt" />
+        </TableRow>
+    </TableLayout>
+
+</LinearLayout>
