@@ -15,10 +15,25 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:text="@string/settings_delay_prompt" />
+
+            <Spinner
+                android:id="@+id/videoStartDelay"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:entries="@array/settings_delay"
+                android:prompt="@string/settings_delay_prompt" />
+        </TableRow>
+
+        <TableRow android:layout_margin="4dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:text="@string/settings_colormode_prompt" />
 
             <Spinner
-                android:id="@+id/photoColorMode"
+                android:id="@+id/videoColorMode"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:entries="@array/settings_colormode"
@@ -33,7 +48,7 @@
                 android:text="@string/settings_ev_prompt" />
 
             <Spinner
-                android:id="@+id/photoExposureValue"
+                android:id="@+id/videoExposureValue"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:entries="@array/settings_ev"
@@ -45,10 +60,25 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:text="@string/settings_fov_prompt" />
+
+            <Spinner
+                android:id="@+id/videoFieldOfView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:entries="@array/settings_fov"
+                android:prompt="@string/settings_fov_prompt" />
+        </TableRow>
+
+        <TableRow android:layout_margin="4dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:text="@string/settings_iso_prompt" />
 
             <Spinner
-                android:id="@+id/photoIso"
+                android:id="@+id/videoIso"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:entries="@array/settings_iso"
@@ -63,7 +93,7 @@
                 android:text="@string/settings_meteringmode_prompt" />
 
             <Spinner
-                android:id="@+id/photoMeteringMode"
+                android:id="@+id/videoMeteringMode"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:entries="@array/settings_meteringmode"
@@ -75,14 +105,29 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="@string/settings_photoresolution_prompt" />
+                android:text="@string/settings_videoresolution_prompt" />
 
             <Spinner
-                android:id="@+id/photoResolution"
+                android:id="@+id/videoResolution"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:entries="@array/settings_photoresolution"
-                android:prompt="@string/settings_photoresolution_prompt" />
+                android:entries="@array/settings_videoresolution"
+                android:prompt="@string/settings_videoresolution_prompt" />
+        </TableRow>
+
+        <TableRow android:layout_margin="4dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/settings_quality_prompt" />
+
+            <Spinner
+                android:id="@+id/videoQuality"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:entries="@array/settings_quality"
+                android:prompt="@string/settings_quality_prompt" />
         </TableRow>
 
         <TableRow android:layout_margin="4dp">
@@ -93,7 +138,7 @@
                 android:text="@string/settings_sharpness_prompt" />
 
             <Spinner
-                android:id="@+id/photoSharpness"
+                android:id="@+id/videoSharpness"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:entries="@array/settings_sharpness"
@@ -105,14 +150,14 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="@string/settings_shuttertime_prompt" />
+                android:text="@string/settings_whitebalance_prompt" />
 
             <Spinner
-                android:id="@+id/photoShutterTime"
+                android:id="@+id/videoWhiteBalance"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:entries="@array/settings_shuttertime"
-                android:prompt="@string/settings_shuttertime_prompt" />
+                android:entries="@array/settings_whitebalance"
+                android:prompt="@string/settings_whitebalance_prompt" />
         </TableRow>
 
         <TableRow android:layout_margin="4dp">
@@ -120,14 +165,45 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="@string/settings_whitebalance_prompt" />
+                android:text="@string/settings_videostandard_prompt" />
 
             <Spinner
-                android:id="@+id/photoWhiteBalance"
+                android:id="@+id/videoStandard"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:entries="@array/settings_whitebalance"
-                android:prompt="@string/settings_whitebalance_prompt" />
+                android:entries="@array/settings_videostandard"
+                android:prompt="@string/settings_videostandard_prompt" />
+        </TableRow>
+
+        <TableRow android:layout_margin="4dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/settings_videorotate_prompt" />
+
+            <Spinner
+                android:id="@+id/videoRotate"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:entries="@array/settings_videorotate"
+                android:prompt="@string/settings_videorotate_prompt" />
+        </TableRow>
+
+        <TableRow android:layout_margin="4dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/settings_mute_prompt" />
+
+            <Switch
+                android:id="@+id/videoMuteState"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:checked="false"
+                android:switchMinWidth="200dp"
+                android:layout_gravity="left"/>
         </TableRow>
     </TableLayout>
 

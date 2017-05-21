@@ -4,13 +4,10 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:title="Start Recording"
-        android:onClick="startRecording" />
-     <item
-        android:title="Stop Recording"
-        android:onClick="stopRecording" />
+        android:title="Switch Mode"
+        android:onClick="switchMode" />
     <item
-        android:onClick="capturePhoto"
-        android:title="Capture Photo" />
+        android:onClick="showSettings"
+        android:title="Settings" />
 
 </menu>

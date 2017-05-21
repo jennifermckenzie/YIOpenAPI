@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -7,7 +8,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:gravity="center">
+        android:gravity="center"
+        android:visibility="visible">
         <ImageView android:id="@+id/camera_image"
             android:layout_width="220dp"
             android:layout_height="170dp"
@@ -52,11 +54,40 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:visibility="invisible">
+
+        <Button
+            android:id="@+id/actionButton"
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:text="Record"
+            android:onClick="actionButtonPressed"
+            android:layout_margin="6dp"/>
         <GridView android:id="@+id/gridView"
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:numColumns="auto_fit"
-            android:columnWidth="120dp">
+            android:columnWidth="120dp"
+            android:layout_alignTop="@+id/linearLayout2"
+            android:layout_alignLeft="@+id/linearLayout2"
+            android:layout_alignStart="@+id/linearLayout2"
+            android:layout_marginTop="66dp">
         </GridView>
     </RelativeLayout>
+
+    <include android:id="@+id/photoSettings"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
+        layout="@layout/photo_settings"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <include android:id="@+id/videoSettings"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
+        layout="@layout/video_settings"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
 </RelativeLayout>
