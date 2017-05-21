@@ -4,7 +4,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:title="Switch Mode"
+        android:title="Switch Camera Mode"
         android:onClick="switchMode" />
     <item
         android:onClick="showSettings"
